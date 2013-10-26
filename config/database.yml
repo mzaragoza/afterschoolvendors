@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: afterschoolvendors_dev
+  pool: 5
+  username: moiseszaragoza
+  password:
+
+test: &test
+  adapter: postgresql
+  encoding: unicode
+  database: afterschoolvendors_test
+  tool: 5
+  username: moiseszaragoza
+  password:
+
+cucumber:
+  <<: *test
+  username: moiseszaragoza
+  password:
+
