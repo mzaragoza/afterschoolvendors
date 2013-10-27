@@ -82,24 +82,36 @@
                 %ul#menu-main.nav
                   %li.menu-item.active-menu-item.menu-item
                     %a{href: "#"} Homepage
-                    -#%ul.sub-menu
-                      %li.menu-item
-                        %a{href: "frontpage-slider.html"} Revolution slider
-                      %li.menu-item
-                        %a{href: "frontpage-map-vertical.html"} Hompage - Vertical filter
-                      %li.menu-item
-                        %a{href: "index.html"} Hompage - Horizontal filter
                   %li.menu-item.menu-item
-                    %a{href: "#"} Listings
-                  %li.menu-item.menu-item
-                    %a{href: "#"} Pages
-                  %li.menu-item.menu-item
-                    %a{href: "#"} Submissions
-                  %li.menu-item.menu-item
-                    %a{href: "#"} Templates
+                    %a{href: "#"} Category
                     %ul.sub-menu
+                      %li.menu-item
+                        %a{href: "#"} Art Programs
+                      %li.menu-item
+                        %a{href: "#"} Music Programs
+                      %li.menu-item
+                        %a{href: "#"} Education Programs
+                      %li.menu-item
+                        %a{href: "#"} Sports Programs
+                      %li.menu-item
+                        %a{href: "#"} Animal Programs
+                        %ul.sub-menu
+                          %li.menu-item
+                            %a{href: "#"} Sub 1
+                          %li.menu-item
+                            %a{href: "#"} Sub 2
+                          %li.menu-item
+                            %a{href: "#"} Sub 3
+                  %li.menu-item.menu-item
+                    = link_to 'About Us', about_us_path
+                  %li.menu-item.menu-item
+                    = link_to 'List With US', list_with_us_path
+                  %li.menu-item.menu-item
+                    = link_to 'Contact Us', contact_us_path
                   %li.menu-item
-                    %a{href: "contact"} Contact
+                    = link_to 'F.A.Q.', faq_path
+                  -#%li.menu-item
+                    %a{href: "#"} FAQ
             .pull-right
               .list-property
                 .ribbon
@@ -279,186 +291,83 @@
         #footer-top-inner.container
           .row
             .span3
-              #mostrecentproperties_widget-3.widget.properties
-                %h2 Most Recent Properties
-                .content
-                  .property.clearfix
-                    .image
-                      %a{href: "property-detail.html"}
-                        %img.thumbnail-image{alt: "19", height: "425", src: "assets/img/property-tmp-small.png", width: "570"}/
-                    / /.image
-                    .wrapper
-                      .title
-                        %h3
-                          %a{href: "property-detail.html"}
-                            643 37th Ave
-                      / /.title
-                      .location Burrville
-                      / /.location
-                      .price
-                        Contact us
-                      / /.price
-                    / /.wrapper
-                  / /.property
-                  .property-info.clearfix
-                    .area
-                      %i.icon.icon-normal-cursor-scale-up
-                      800m
-                      %sup 2
-                    / /.area
-                    .bedrooms
-                      %i.icon.icon-normal-bed
-                      2
-                    / /.bedrooms
-                  / /.info
-                  .property.clearfix
-                    .image
-                      %a{href: "property-detail.html"}
-                        %img.thumbnail-image{alt: "20", height: "425", src: "assets/img/property-tmp-small.png", width: "570"}/
-                    / /.image
-                    .wrapper
-                      .title
-                        %h3
-                          %a{href: "property-detail.html"}
-                            2459 Tilden St
-                      / /.title
-                      .location Judiciary Square
-                      / /.location
-                      .price
-                        500 €
-                        %span.suffix / per month
-                      / /.price
-                    / /.wrapper
-                  / /.property
-                  .property-info.clearfix
-                    .area
-                      %i.icon.icon-normal-cursor-scale-up
-                      1030m
-                      %sup 2
-                    / /.area
-                    .bedrooms
-                      %i.icon.icon-normal-bed
-                      12
-                    / /.bedrooms
-                    .bathrooms
-                      %i.icon.icon-normal-shower
-                      6
-                    / /.bathrooms
-                  / /.info
-                  .property.clearfix
-                    .image
-                      %a{href: "property-detail.html"}
-                        %img.thumbnail-image{alt: "17", height: "425", src: "assets/img/property-tmp-small.png", width: "570"}/
-                    / /.image
-                    .wrapper
-                      .title
-                        %h3
-                          %a{href: "property-detail.html"}
-                            677 Cottage Terrace
-                      / /.title
-                      .location Spring Valley
-                      / /.location
-                      .price
-                        59,600 €
-                      / /.price
-                    / /.wrapper
-                  / /.property
-                  .property-info.clearfix
-                    .area
-                      %i.icon.icon-normal-cursor-scale-up
-                      650m
-                      %sup 2
-                    / /.area
-                    .bedrooms
-                      %i.icon.icon-normal-bed
-                      1
-                    / /.bedrooms
-                    .bathrooms
-                      %i.icon.icon-normal-shower
-                      1
-                    / /.bathrooms
-                  / /.info
-                / /.content
+              #nav_menu-2.widget.widget-nav_menu
+                %h2 Helpful Links
+                .menu-helpful-links-container
+                  %ul#menu-helpful-links.menu
+                    %li.menu-item
+                      %a{href: "#"} Cat 1
+                    %li.menu-item
+                      %a{href: "#"} Cat 2
+                    %li.menu-item
+                      %a{href: "#"} Cat 3
+                    %li.menu-item
+                      %a{href: "#"} Cat 4
+                    %li.menu-item
+                      %a{href: "#"} Cat 5
+                    %li.menu-item
+                      %a{href: "#"} Cat 6
+                    %li.menu-item
+                      %a{href: "#"} Cat 7
+                    %li.menu-item
+                      %a{href: "#"} Cat 8
+                    %li.menu-item
+                      %a{href: "#"} Cat 9
+                    %li.menu-item
+                      %a{href: "#"} Cat 10
             .span3
               #nav_menu-2.widget.widget-nav_menu
                 %h2 Helpful Links
                 .menu-helpful-links-container
                   %ul#menu-helpful-links.menu
                     %li.menu-item
-                      %a{href: "templates/default-left"} Default Template
+                      %a{href: "#"} Cat 11
                     %li.menu-item
-                      %a{href: "templates/default-right"} Right Sidebar Template
+                      %a{href: "#"} Cat 12
                     %li.menu-item
-                      %a{href: "templates/default-full"} Fullwidth Template
+                      %a{href: "#"} Cat 13
                     %li.menu-item
-                      %a{href: "properties"} Properties Grid Template
+                      %a{href: "#"} Cat 14
                     %li.menu-item
-                      %a{href: "faq"} FAQ
+                      %a{href: "#"} Cat 15
                     %li.menu-item
-                      %a{href: "404"} 404 page
+                      %a{href: "#"} Cat 16
                     %li.menu-item
-                      %a{href: "login"} Login Template
+                      %a{href: "#"} Cat 17
                     %li.menu-item
-                      %a{href: "register"} Register Template
+                      %a{href: "#"} Cat 18
+                    %li.menu-item
+                      %a{href: "#"} Cat 19
+                    %li.menu-item
+                      %a{href: "#"} Cat 20
             .span3
-              #agents_widget-2.widget.our-agents
-                %h2 Agents
-                .content
-                  .agent.clearfix
-                    .image
-                      %a{href: "agents/agent-detail"}
-                        %img{alt: "Cynthia G. Stenson", src: "assets/img/agent-tmp.png"}/
-                    / /.image
-                    .name
-                      %a{href: "agents/agent-detail"} Cynthia G. Stenson
-                    / /.name
-                    .phone
-                      %i.icon.icon-normal-phone
-                      985-632-254
-                    / /.phone
-                    .email
-                      %i.icon.icon-normal-mail
-                      %a{href: "mailto:cynthia@example.com"} cynthia@example.com
-                    / /.email
-                  / /.agent
-                  .agent.clearfix
-                    .image
-                      %a{href: "agents/agent-detail"}
-                        %img{alt: "Stephen E. Kennedy", src: "assets/img/agent-tmp.png"}/
-                    / /.image
-                    .name
-                      %a{href: "agents/agent-detail"} Stephen E. Kennedy
-                    / /.name
-                    .phone
-                      %i.icon.icon-normal-phone
-                      987-852-123
-                    / /.phone
-                    .email
-                      %i.icon.icon-normal-mail
-                      %a{href: "mailto:stephen@example.com"} stephen@example.com
-                    / /.email
-                  / /.agent
-                  .agent.clearfix
-                    .image
-                      %a{href: "agents/agent-detail"}
-                        %img{alt: "Myrtle J. Metz", src: "assets/img/agent-tmp.png"}/
-                    / /.image
-                    .name
-                      %a{href: "agents/agent-detail"} Myrtle J. Metz
-                    / /.name
-                    .phone
-                      %i.icon.icon-normal-phone
-                      987-963-654
-                    / /.phone
-                    .email
-                      %i.icon.icon-normal-mail
-                      %a{href: "mailto:myrtle@example.com"} myrtle@example.com
-                    / /.email
-                  / /.agent
-                / /.content
+              #nav_menu-2.widget.widget-nav_menu
+                %h2 Helpful Links
+                .menu-helpful-links-container
+                  %ul#menu-helpful-links.menu
+                    %li.menu-item
+                      %a{href: "#"} Cat 21
+                    %li.menu-item
+                      %a{href: "#"} Cat 22
+                    %li.menu-item
+                      %a{href: "#"} Cat 23
+                    %li.menu-item
+                      %a{href: "#"} Cat 24
+                    %li.menu-item
+                      %a{href: "#"} Cat 25
+                    %li.menu-item
+                      %a{href: "#"} Cat 26
+                    %li.menu-item
+                      %a{href: "#"} Cat 27
+                    %li.menu-item
+                      %a{href: "#"} Cat 28
+                    %li.menu-item
+                      %a{href: "#"} Cat 29
+                    %li.menu-item
+                      %a{href: "#"} Cat 30
             .span3
               #featuredproperties_widget-2.widget.properties
-                %h2 Featured Properties
+                %h2 Featured Listings
                 .content
                   .property.clearfix
                     .image
@@ -468,98 +377,52 @@
                     .wrapper
                       .title
                         %h3
-                          %a{href: "property-detail.html"}
-                            20th St NE
+                          %a{href: "#"}
+                            Wacky Wild
                       / /.title
-                      .location Benning
+                      .location Ft Lauderdale,m Fl
                       / /.location
                       .price
-                        85,600 €
+                        Check it out
                       / /.price
                     / /.wrapper
                   / /.property
-                  .property-info.clearfix
-                    .area
-                      %i.icon.icon-normal-cursor-scale-up
-                      450m
-                      %sup 2
-                    / /.area
-                    .bedrooms
-                      %i.icon.icon-normal-bed
-                      1
-                    / /.bedrooms
-                    .bathrooms
-                      %i.icon.icon-normal-shower
-                      2
-                    / /.bathrooms
-                  / /.info
                   .property.clearfix
                     .image
                       %a{href: "property-detail.html"}
-                        %img.thumbnail-image{alt: "12", height: "425", src: "assets/img/property-tmp-small.png", width: "570"}/
+                        %img.thumbnail-image{alt: "1", height: "425", src: "assets/img/property-tmp-small.png", width: "570"}/
                     / /.image
                     .wrapper
                       .title
                         %h3
-                          %a{href: "property-detail.html"}
-                            246 Varnum Pl NE
+                          %a{href: "#"}
+                            Circle Tech Fl
                       / /.title
-                      .location Kingman Park
+                      .location Margate, Fl
                       / /.location
                       .price
-                        32,500 €
+                        Check it out
                       / /.price
                     / /.wrapper
                   / /.property
-                  .property-info.clearfix
-                    .area
-                      %i.icon.icon-normal-cursor-scale-up
-                      500m
-                      %sup 2
-                    / /.area
-                    .bedrooms
-                      %i.icon.icon-normal-bed
-                      2
-                    / /.bedrooms
-                    .bathrooms
-                      %i.icon.icon-normal-shower
-                      3
-                    / /.bathrooms
-                  / /.info
                   .property.clearfix
                     .image
                       %a{href: "property-detail.html"}
-                        %img.thumbnail-image{alt: "6", height: "425", src: "assets/img/property-tmp-small.png", width: "570"}/
+                        %img.thumbnail-image{alt: "1", height: "425", src: "assets/img/property-tmp-small.png", width: "570"}/
                     / /.image
                     .wrapper
                       .title
                         %h3
-                          %a{href: "property-detail.html"}
-                            Randolph St NW
+                          %a{href: "#"}
+                            Go Trucker Go
                       / /.title
-                      .location Civic Betterment
+                      .location Pompano Beach, Fl
                       / /.location
                       .price
-                        97,400 €
+                        Check it out
                       / /.price
                     / /.wrapper
                   / /.property
-                  .property-info.clearfix
-                    .area
-                      %i.icon.icon-normal-cursor-scale-up
-                      680m
-                      %sup 2
-                    / /.area
-                    .bedrooms
-                      %i.icon.icon-normal-bed
-                      3
-                    / /.bedrooms
-                    .bathrooms
-                      %i.icon.icon-normal-shower
-                      2
-                    / /.bathrooms
-                  / /.info
-                / /.content
           / /.row
         / /#footer-top-inner
       / /#footer-top
@@ -569,20 +432,25 @@
             .row
               .span6
                 #text-3.widget.widget-text
-                  .textwidget © 2013 Aviators, All Rights reserved
+                  .textwidget 
+                    © 
+                    2013
+                    After School Vendors, All Rights reserved
               / /.copyright
               .span6
                 #nav_menu-3.widget.widget-nav_menu
                   .menu-footer-links-container
                     %ul#menu-footer-links.menu
                       %li.menu-item.active
-                        %a{href: ""} Homepage
+                        = link_to 'Home', root_path
+                      %li.menu-item.menu-item
+                        = link_to 'About Us', about_us_path
+                      %li.menu-item.menu-item
+                        = link_to 'List With US', list_with_us_path
+                      %li.menu-item.menu-item
+                        = link_to 'Contact Us', contact_us_path
                       %li.menu-item
-                        %a{href: "pricing"} Pricing
-                      %li.menu-item
-                        %a{href: "faq"} FAQ
-                      %li.menu-item
-                        %a{href: "contact"} Contact
+                        = link_to 'F.A.Q.', faq_path
               / /.span6
             / /.row
           / /#footer-inner
