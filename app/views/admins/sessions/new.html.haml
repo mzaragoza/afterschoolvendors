@@ -1,0 +1,31 @@
+#login
+  .container
+    .wrapper
+      .widget.widget-heading-simple.widget-body-gray
+        .widget-body
+          / Form
+          = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+            = f.error_notification
+            %label Email
+            = f.input :email, label: false, input_html: { class: 'input-block-level margin-none', placeholder: "Email address" }
+            .row-fluid
+            %label
+              Password
+            = f.input :password, label: false, input_html: { class: 'input-block-level margin-none', placeholder: "Password" }
+            .row-fluid
+            %br
+            %br
+            = link_to "Forgot your password?", new_password_path(resource_name), class: 'password'
+            %br
+            %br
+            .row-fluid
+              .span8
+                .uniformjs
+                  %label.checkbox
+                    = f.input  :remember_me, :as => :boolean, :inline_label => 'Remember Me' if devise_mapping.rememberable?
+              .span4.center
+                = button_tag "Sign in", :class => 'btn btn-block btn-inverse'
+                = #f.submit "Sign inx", :class => 'btn btn-block btn-inverse'
+          / // Form END
+      / // Box END
+

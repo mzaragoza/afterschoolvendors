@@ -1,0 +1,26 @@
+!!!
+%html.fluid.top-full.sidebar.sidebar-full
+  %head
+    %title  After School Vendors Admin
+    = stylesheet_link_tag    "admins", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    - unless flash[:notice].blank?
+      %br
+      %br
+      .alert.alert-success
+      = content_tag :div, flash[:notice]
+    - unless flash[:error].blank?
+      %br
+      %br
+      .alert.alert-danger
+      = content_tag :div, flash[:error]
+    - unless flash[:alert].blank?
+      %br
+      %br
+      .alert.alert-info
+      = content_tag :div, flash[:alert]
+    = link_to t(:log_out), destroy_admin_session_path, :method => :delete
+    %br
+    = yield
+    = javascript_include_tag "admins", "data-turbolinks-track" => true
