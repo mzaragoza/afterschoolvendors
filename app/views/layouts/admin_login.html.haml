@@ -1,10 +1,4 @@
-!!!
-/[if lt IE 7] <html class="ie lt-ie9 lt-ie8 lt-ie7 fluid top-full sidebar sidebar-full">
-/[if IE 7] <html class="ie lt-ie9 lt-ie8 fluid top-full sticky-top sidebar sidebar-full">
-/[if IE 8] <html class="ie lt-ie9 fluid top-full sticky-top sidebar sidebar-full">
-/[if gt IE 8] <html class="ie gt-ie8 fluid top-full sticky-top sidebar sidebar-full">
-/ [if !IE]><!
-%html.fluid.top-full.sticky-top.sidebar.sidebar-full
+-#%html.fluid.top-full.sticky-top.sidebar.sidebar-full
   / <![endif]
   %head
     %title  After School Vendors
@@ -48,4 +42,48 @@
         = content_tag :div, flash[:alert]
     = yield
     = javascript_include_tag "admin_longin", "data-turbolinks-track" => true
-
+!!!
+/[if lt IE 7] <html class="lt-ie9 lt-ie8 lt-ie7" lang="en">
+/[if IE 7] <html class="lt-ie9 lt-ie8" lang="en">
+/[if IE 8] <html class="lt-ie9" lang="en">
+/ [if gt IE 8]><!
+%html{lang: "en"}
+  / <![endif]
+  %head
+    %meta{charset: "utf-8"}/
+    / Viewport Metatag
+    %meta{content: "width=device-width,initial-scale=1.0", name: "viewport"}/
+    / Required Stylesheets
+    %link{href: "/assets/bootstrap/css/bootstrap.min.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "/assets/css/fonts/ptsans/stylesheet.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "/assets/css/fonts/icomoon/style.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "/assets/css/login.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %link{href: "/assets/css/mws-theme.css", media: "screen", rel: "stylesheet", type: "text/css"}/
+    %title After School Vendors - Login Page
+  %body
+    - unless flash[:notice].blank?
+      %br
+      %br
+      .alert.alert-success
+        = content_tag :div, flash[:notice]
+    - unless flash[:error].blank?
+      %br
+      %br
+      .alert.alert-danger
+        = content_tag :div, flash[:error]
+    - unless flash[:alert].blank?
+      %br
+      %br
+      .alert.alert-info
+        = content_tag :div, flash[:alert]
+    = yield
+    / JavaScript Plugins
+    %script{src: "/assets/js/libs/jquery-1.8.3.min.js"}
+    %script{src: "/assets/js/libs/jquery.placeholder.min.js"}
+    %script{src: "/assets/custom-plugins/fileinput.js"}
+    / jQuery-UI Dependent Scripts
+    %script{src: "/assets/jui/js/jquery-ui-effects.min.js"}
+    / Plugin Scripts
+    %script{src: "/assets/plugins/validate/jquery.validate-min.js"}
+    / Login Script
+    %script{src: "/assets/js/core/login.js"}
