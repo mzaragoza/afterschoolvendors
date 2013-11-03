@@ -9,6 +9,7 @@ Afterschoolvendors::Application.routes.draw do
     namespace :admins do
       resources :ui
       resources :admins
+      resources :categories
       resources :profile, :only => [:edit, :update]
       get '/dashboard' => 'dashboards#index', as: :dashboard
       get '/' => 'dashboards#index'

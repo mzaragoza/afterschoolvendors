@@ -1,0 +1,19 @@
+.mws-panel.grid_8
+  .mws-panel-header
+    %span
+      %i.icon-table
+      Category
+  .mws-panel-body.no-padding
+    %table.mws-datatable-fn.mws-table
+      %thead
+        %tr
+          %th Name
+          %th Paranet Name
+          %th
+      %tbody
+        - categories.each do |c|
+          %tr
+            %td= c.name.titleize
+            %td
+              = c.parent.name.titleize if c.parent
+            %td= link_to t(:edit), edit_admins_category_path(c), class: 'btn btn-xs btn-inverse pull-right'
